@@ -1,12 +1,14 @@
 # C Toolbox
 
-面向熟悉 C 的使用者，提供 C99 字符串、容器和 IO。由 Annouimo/c-exam-kit 的工具箱开发分支迁入，原提交历史保留。
+Routilet 维护的独立 C99 工具箱，面向已经熟悉 C 的使用者，提供字符串、容器、IO 和按需源码装配。
 
-v0.11.0 默认生成单头文件，提交时按需组装。旧脚手架请访问 https://github.com/Annouimo/c-exam-kit 。
+所属组织：[Routilet](https://github.com/Routilet) · 原始设计者：Annouimo。
+
+v0.11.0 默认生成单头文件，提交时按需组装。相比面向课程基础编程的 [C Exam Kit](https://github.com/Routilet/c-exam-kit)，C Toolbox 提供更丰富的容器和模块化 API，独立使用，不依赖 Companion。
 
 ## 使用
 
-下载 Release 的单文件 Python 入口。运行后输入题目目录，再选择程序框架。空输入直接导出 Markdown 手册。默认生成 `main.c`、`c_toolbox.h` 和 `prepare.py`。选择“仅创建工具箱”可省略 `main.c`。
+从 [GitHub Releases](https://github.com/Routilet/c-toolbox/releases/latest) 下载单文件 Python 入口。运行后输入题目目录，再选择程序框架。空输入直接导出 Markdown 手册。默认生成 `main.c`、`c_toolbox.h` 和 `prepare.py`。选择“仅创建工具箱”可省略 `main.c`。
 
 默认模式面向单个 `main.c`，支持内置 API，以及工具箱和标准库的 `#include`。运行 `prepare.py` 时，它读取 `main.c`，用内置索引组装单文件，报告字节数，编译通过后复制。完整头文件用于本地编译，须和 `prepare.py` 成对更新。
 
@@ -41,3 +43,7 @@ int main(void) {
 ## 发布
 
 合并到 main 后，自动运行 Linux GCC/Clang、macOS、Windows MinGW 和 Python 3.9 检查，构建唯一的版本化 Python 附件。新版本先创建草稿，上传并验证附件后自动发布正式 Release；失败保留草稿供检查。已发布版本自动跳过，不覆盖附件；修复时增加版本号。不提供 PDF 或可执行二进制。
+
+## 项目来源与授权
+
+本项目源于原 Annouimo/c-exam-kit 仓库的工具箱开发分支，保留原提交历史；现由 Routilet 独立维护。授权范围见 [LICENSING.md](LICENSING.md)。
